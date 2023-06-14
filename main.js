@@ -2,6 +2,19 @@
 let welcome = document.querySelector("#welcome");
 welcome.addEventListener("click", () => {alert("Hello, world!")});
 // 2. Crie um script que declare duas variáveis e exiba o resultado da soma entre elas.
+
+let buttonEx02 = document.querySelector("#buttonEx02");
+
+function somar(n1, n2) {
+  let resultEx02 = document.querySelector("#resultEx02");
+
+  n1 = document.querySelector("#num1");
+  n2 = document.querySelector("#num2");
+
+  return resultEx02.textContent = `O resultado de ${num1.value} somado a ${num2.value} é: ${Number(num1.value) + Number(num2.value)}`
+}
+
+buttonEx02.addEventListener("click", somar)
 // 3. Crie um script que declare uma variável e verifique se o seu valor é um número. Se for, exiba a mensagem "É um número", caso contrário, exiba a mensagem "Não é um número".
     
 //     Para saber o tipo de dado você pode usar o operador `typeof`
