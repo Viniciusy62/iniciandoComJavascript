@@ -110,8 +110,58 @@ function multiplication(n1, n2) {
 }
 
 btnEx07.addEventListener("click", multiplication);
+
 // 8. Crie um script que declare duas variáveis e exiba o resultado da divisão entre elas.
+let btnEx08 = document.querySelector("#btn-ex08");
+
+function divisor(n1, n2) {
+  let resultEx08 = document.querySelector("#resultEx08");
+
+  n1 = document.querySelector("#num1-div");
+  n2 = document.querySelector("#num2-div");
+
+  resultEx08.textContent = 
+    `O resultado de ${n1.value} dividio por ${n2.value} é: 
+    ${Number(n1.value) / Number(n2.value)}`;
+
+  let result = resultEx08.textContent;
+
+  n1.value = "";
+  n2.value = "";
+
+  return result;
+}
+
+btnEx08.addEventListener("click", divisor);
 
 // 9. Crie um script que declare uma variável e verifique se o seu valor é um número par. Se for, exiba a mensagem "É um número par", caso contrário, exiba a mensagem "Não é um número par".
+let btnEx09 = document.querySelector("#btn-ex09");
+
+let isPar = (num) => {
+  let result = document.querySelector("#resultEx09");
+  num = document.querySelector("#num-ex09");
+
+  if(num.value % 2 == 0) {
+    result.textContent = `${num.value} é PAR`;
+  } else {
+    result.textContent = `${num.value} não é PAR`;
+  }
+}
+
+btnEx09.addEventListener("click", isPar);
 
 // 10. Crie um script que declare uma variável e verifique se o seu valor é um número ímpar. Se for, exiba a mensagem "É um número ímpar", caso contrário, exiba a mensagem "Não é um número ímpar".
+let btnEx10 = document.querySelector("#btn-ex10");
+
+let isImpar = (num) => {
+  let result = document.querySelector("#resultEx10");
+  num = document.querySelector("#num-ex10");
+
+  if(num.value % 2 != 0) {
+    result.textContent = `${num.value} é ÍMPAR`;
+  } else {
+    result.textContent = `${num.value} não é ÍMPAR`;
+  }
+}
+
+btnEx10.addEventListener("click", isImpar);
